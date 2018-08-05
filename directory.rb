@@ -1,5 +1,22 @@
+require 'date'
+months = [
+  :January,
+  :February,
+  :March,
+  :Arpil,
+  :May,
+  :June,
+  :July,
+  :August,
+  :September,
+  :October,
+  :November,
+  :December
+]
+month = months[(DateTime.now.strftime("%d/%m/%Y %H:%M").to_s[3..4].to_i) -1]
+
 students = [
-     { name: "Dr. Hannibal Lecter", cohort: :november},
+     { name: "Dr. Hannibal Lecter", cohort: month},
      { name: "Darth Vader", cohort: :november},
      { name: "Nurse Ratched", cohort: :november},
      { name: "Michael Corleone", cohort: :november},
